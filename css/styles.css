@@ -2,8 +2,8 @@
     position: fixed;
     width: 250px;
     height: 100%;
-    background-color: #D8F3DC; /* Background color using the provided hex code */
-    color: #74C69D; /* Text color using the provided hex code */
+    background-color: #78909c; /* Background color using the provided hex code */
+    color: #327956; /* Text color using the provided hex code */
     padding: 20px;
 }
 
@@ -23,7 +23,7 @@
 
 .sidebar a {
     text-decoration: none;
-    color: #74C69D; /* Text color using the provided hex code */
+    color: #438b67; /* Text color using the provided hex code */
     font-size: 18px;
 }
 
@@ -48,7 +48,7 @@ body {
 
 /* Header */
 h1 {
-    color: #74C69D; /* Header color using the provided hex code */
+    color: #34895e; /* Header color using the provided hex code */
 }
 
 /* Existing CSS remains the same */
@@ -89,8 +89,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background-color: #D8F3DC; /* Table background color using the provided hex code */
-    border: 1px solid #95D5B2; /* Table border color using the provided hex code */
+    background-color: #5ba568; /* Table background color using the provided hex code */
+    border: 1px solid #63a882; /* Table border color using the provided hex code */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -101,7 +101,7 @@ th, td {
 }
 
 th {
-    background-color: #B7E4C7; /* Header color using the provided hex code */
+    background-color: #9abaa5; /* Header color using the provided hex code */
 }
 
 /* Forms */
@@ -156,7 +156,7 @@ input[type="submit"]:hover {
 
 /* Header */
 header {
-    background-color: #D8F3DC;
+    background-color: #5d8963;
     color: #fff;
     padding: 20px 0;
     text-align: center;
