@@ -1,7 +1,7 @@
-<?php
-include_once("../db.php"); // Include the Database class file
-include_once("../student.php"); // Include the Student class file
-include_once("../student_details.php"); // Include the Student class file
+<?php 
+include_once("../db.php"); 
+include_once("../student.php"); 
+include_once("../student_details.php"); 
 include_once("../town_city.php");
 include_once("../province.php");
 
@@ -17,6 +17,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     'gender' => $_POST['gender'],
     'birthday' => $_POST['birthday'],
     ];
+// include_once("../db.php"); 
+// include_once("../student.php"); 
+// include_once("../student_details.php"); 
+// include_once("../town_city.php");
+// include_once("../province.php");
+
+
+
+
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $data = [    
+//     'student_number' => $_POST['student_number'],
+//     'first_name' => $_POST['first_name'],
+//     'middle_name' => $_POST['middle_name'],
+//     'last_name' => $_POST['last_name'],
+//     'gender' => $_POST['gender'],
+//     'birthday' => $_POST['birthday'],
+//     ];
 
     // Instantiate the Database and Student classes
     $database = new Database();
@@ -120,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $database = new Database();
             $provinces = new Province($database);
             $results = $provinces->getAll();
-            // echo print_r($results);
+            
             foreach($results as $result)
             {
                 echo '<option value="' . $result['id'] . '">' . $result['name'] . '</option>';
