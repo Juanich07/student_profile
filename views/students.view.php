@@ -45,12 +45,13 @@ $student = new Student($db);
             foreach ($results as $result) {
             ?>
             <tr>
+            
                 <td><?php echo $result['student_number']; ?></td>
                 <td><?php echo $result['first_name']; ?></td>
                 <td><?php echo $result['middle_name']; ?></td>
                 <td><?php echo $result['last_name']; ?></td>
                 <td><?php echo $result['gender'] == 1 ? 'F' : 'M'; ?></td>
-                <td><?php echo $result['birthday']; ?></td>
+                <td><?php echo date('Y M d' , strtotime($result['birthday'])); ?></td>
                 <td>
                     <a href="student_edit.php?id=<?php echo $result['id']; ?>">Edit</a>
                     |
