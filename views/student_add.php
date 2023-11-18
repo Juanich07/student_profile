@@ -42,9 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $student_id = $student->create($data);
     
     if ($student_id) {
-        // Student record successfully created
         
-        // Retrieve student details from the form
+        
+        
         $studentDetailsData = [
             'student_id' => $student_id, // Use the obtained student ID
             'contact_number' => $_POST['contact_number'],
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
-    <title>Add Student Data</title>
+    <title>Add Students Data</title>
 </head>
 <body>
     <!-- Include the header and navbar -->
@@ -114,41 +114,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="street">Street:</label>
         <input type="text" id="street" name="street" required>
 
-        
 
+        
         <label for="town_city">Town / City:</label>
-        <select name="town_city" id="town_city" required>
+        
+        <input type="text" id="town_city" name="town_city" required>
+
+        <!-- <input type="submit" value="Add student_details"> -->
         <?php
 
-            $database = new Database();
-            $towns = new TownCity($database);
-            $results = $towns->getAll();
-            // echo print_r($results);
-            foreach($results as $result)
-            {
-                echo '<option value="' . $result['id'] . '">' . $result['name'] . '</option>';
-            }
+            // $database = new Database();
+            // $towns = new TownCity($database);
+            // $results = $towns->getALL();
+            
+            // foreach($results as $result)
+            // {
+            //     echo '<option value="' . $result['id'] . '">' . $result['name'] . '</option>';
+            // }
         ?>      
-        </select>
+        <!-- </select>
 
         <label for="province">Province:</label>
         <select name="province" id="province" required>
         <?php
 
-            $database = new Database();
-            $provinces = new Province($database);
-            $results = $provinces->getAll();
+            // $database = new Database();
+            // $provinces = new Province($database);
+            // $results = $provinces->getALL(); 
             
-            foreach($results as $result)
-            {
-                echo '<option value="' . $result['id'] . '">' . $result['name'] . '</option>';
-            }
+            // foreach($results as $result)
+            // {
+            //     echo '<option value="' . $result['id'] . '">' . $result['name'] . '</option>';
+            // } -->
         ?>  
         </select>    
 
         <label for="zip_code">Zip Code:</label>
         <input type="text" id="zip_code" name="zip_code" required>
-
+        <div class="content">
+      <h1>Add Student Data</h1>
+     <form action="" method="post" class="centered-form">
+     </form>    -->
         
 
 
