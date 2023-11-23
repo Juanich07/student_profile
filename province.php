@@ -1,5 +1,5 @@
 <?php
-include_once("db.php"); // Include the Database class file
+include_once("db.php"); 
 
 class Province {
     private $db;
@@ -10,17 +10,17 @@ class Province {
 
     public function create($data) {
         try {
-            // Prepare the SQL INSERT statement
+            
             $sql = "INSERT INTO province(name) VALUES(:province_name);";
             $stmt = $this->db->getConnection()->prepare($sql);
 
-            // Bind values to placeholders
+            
             $stmt->bindParam(':province_name', $data['name']);
 
-            // Execute the INSERT query
+            
             $stmt->execute();
 
-            // Check if the insert was successful
+            
              
             if($stmt->rowCount() > 0)
             {
@@ -28,9 +28,9 @@ class Province {
             }
 
         } catch (PDOException $e) {
-            // Handle any potential errors here
+            
             echo "Error: " . $e->getMessage();
-            throw $e; // Re-throw the exception for higher-level handling
+            throw $e; 
         }
     }
 
@@ -64,13 +64,13 @@ class Province {
             $stmt->bindValue(':id', $id);
             $stmt->bindValue(':name', $data['name']);
 
-            // Execute the query
+            
             $stmt->execute();
 
             return $stmt->rowCount() > 0;
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
-            throw $e; // Re-throw the exception for higher-level handling
+            throw $e; 
         }
     }
     public function delete($id) { # untested

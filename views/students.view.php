@@ -18,7 +18,7 @@ $student_details = new StudentDetails($db);
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
-    
+    <!-- Include the header -->
     <?php include('../templates/header.html'); ?>
     <?php include('../includes/navbar.php'); ?>
 

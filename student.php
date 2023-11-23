@@ -1,6 +1,6 @@
 <?php
 include_once("db.php"); 
-include_once("../town_city.php");
+// include_once("../town_city.php");
 
 class Student {
     private $db;

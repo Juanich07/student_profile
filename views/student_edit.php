@@ -34,7 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'middle_name' => $_POST['middle_name'],
         'last_name' => $_POST['last_name'],
         'gender' => $_POST['gender'],
-        'birthday' => $_POST['birthday'],
+        'birthday' => $_POST['birthday'],  
+        // 'contact_number' => $_POST['contact_number'], 
+        // 'street' => $_POST['street'], 
+        // 'town_city'=> $_POST['town_city'],
+        // 'province'=> $_POST['province'],
+        // 'zip_code'=> $_POST['zip_code'],
+
+      
     ];
 
     $db = new Database();

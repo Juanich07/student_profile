@@ -93,7 +93,7 @@ class StudentDetails {
             $stmt->bindValue(':student_id', $data['student_id']);
             $stmt->bindValue(':contact_number', $data['contact_number']);
             $stmt->bindValue(':street', $data['street']);
-            $stmt->bindValue(':last_name', $data['zip_code']);
+            $stmt->bindValue(':zip_code', $data['zip_code']);
             $stmt->bindValue(':town_city', $data['town_city']);
             $stmt->bindValue(':province', $data['province']);
 
