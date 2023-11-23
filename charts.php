@@ -131,5 +131,33 @@ class Charts
             throw $e; // Re-throw the exception for higher-level handling
         }
     }
+//     public function chart7()
+//     {
+//     try {
+//         $query = "SELECT T.name AS 'Town Name', 
+//                          COUNT(S.town_city) AS 'Student Population', 
+//                          AVG(YEAR(CURDATE()) - YEAR(s.birthday) - (RIGHT(CURDATE(), 5) < RIGHT(s.birthday, 5))) AS 'Average Age'
+//                   FROM   student_details AS SD
+//                          INNER JOIN town_city AS T ON SD.town_city = T.id
+//                          INNER JOIN students AS S ON SD.student_id = S.id
+//                   GROUP BY SD.town_city
+//                   ORDER BY COUNT(SD.town_city) DESC
+//                   LIMIT 10";
+
+//         $stmt = $this->db->getConnection()->prepare($query);
+//         $stmt->execute();
+//         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+//         return $result;
+
+//     } catch (PDOException $e) {
+//         // Handle any potential errors here
+//         echo "Error: " . $e->getMessage();
+//         throw $e; // Re-throw the exception for higher-level handling
+//     }
+// }
+
+   
+
 }
 ?>
