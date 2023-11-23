@@ -1,15 +1,24 @@
 <?php
  
 $dataPoints = array(
-	array("label"=> "Food + Drinks", "y"=> 590),
-	array("label"=> "Activities and Entertainments", "y"=> 261),
-	array("label"=> "Health and Fitness", "y"=> 158),
-	array("label"=> "Shopping & Misc", "y"=> 72),
-	array("label"=> "Transportation", "y"=> 191),
-	array("label"=> "Rent", "y"=> 573),
-	array("label"=> "Travel Insurance", "y"=> 126)
+	array("label"=> "Lake Thalia", "y"=> 135),
+	array("label"=> "Paolomouth", "y"=> 132),
+	array("label"=> "Leannonmouth", "y"=> 131),
+	array("label"=> "East Lawrence", "y"=> 131),
+	array("label"=> "Anitaside", "y"=> 130),
+	array("label"=> "East Louisa", "y"=> 128),
+	array("label"=> "Wymanmouth", "y"=> 127)
 );
-	
+// $link= mysqli_connect("localhost","root","root");
+// mysqli_select_db($link,"school_db");
+// $test=array();
+// $count=0;
+// $res =mysqli_query($link,"SELECT * FROM iwan");
+// while($row=mysqli_fetch_array($res))
+// {
+//     // $test[$count]["label"]=$row["label"];
+//     $test[$count]["y"]=$row[""];
+// }
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -31,18 +40,18 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	exportEnabled: true, 
     theme: "dark2", 
 	title:{
-		text: "Average Expense Per Day  in Thai Baht"
+		text: "Student Population"
 	},
 	subtitles: [{
-		text: "Currency Used: Thai Baht (฿)"
+		text: ""
 	}],
 	data: [{
 		type: "pie",
 		showInLegend: "true",
 		legendText: "{label}",
 		indexLabelFontSize: 16,
-		indexLabel: "{label} - #percent%",
-		yValueFormatString: "฿#,##0",
+		indexLabel: "{label} - Population",
+		yValueFormatString: "#,##0",
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
 });
